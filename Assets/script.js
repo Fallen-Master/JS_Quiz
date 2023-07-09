@@ -1,0 +1,16 @@
+var highscoreEl = document.getElementById('highscore')
+var timerEl = document.getElementById('timer')
+var question1El = document.querySelector('.question-1')
+var question2El = document.querySelector('.question-2')
+var question3El = document.querySelector('.question-3')
+var question4El = document.querySelector('.question-4')
+var question5El = document.querySelector('.question-5')
+var submit1El = document.querySelector('#submit-1')
+var submit2El = document.querySelector('#submit-2')
+var submit3El = document.querySelector('#submit-3')
+var submit4El = document.querySelector('#submit-4')
+var submit5El = document.querySelector('#submit-5')
+var finalSubmitEl = document.querySelector('#submit-final')
+var resultEl = document.querySelector('#results')
+
+
