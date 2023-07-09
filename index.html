@@ -12,16 +12,19 @@
   <body>
     
         <header>
-            <div class="center">
-                <h1>JavaScript Quiz</h1>
-                <p> Try to anser the follwing code-related questions within the time limit. Kepe in mind that incorrect answers will penalize your score/time by 15 seconds</p>
-                <button>Start Quiz</button>
-            </div>
-            <p>View Highscore</p>
-            <p>Time: </p>
+            <p id="Highscore">View Highscore</p>
+            <p id="timer">Time: </p>
         </header>
 <!-- BREAK -->
         <main>
+            <section class="center">
+                <form class="intro">
+                    <h1>JavaScript Quiz</h1>
+                    <p> Try to answer the follwing code-related questions within the time limit. Kepe in mind that incorrect answers will penalize your score/time by 15 seconds</p>
+                    <button id="start">Start Quiz</button>
+                </form>
+            </section>
+
             <section class = questions>
                 <form class="question-1">
                     <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
@@ -102,7 +105,7 @@
                 </form>
             </section>
 
-            <section>
+            <section class="end">
                 <form class="done">
                     <h3>All DONE! </h3>
                     <p> </p>
@@ -118,6 +121,6 @@
         <footer>
 
         </footer>
-    
+     <script src = "./Assets/script.js"></script>
     </body>
 </html>
