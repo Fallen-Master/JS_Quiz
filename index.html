@@ -18,61 +18,101 @@
                 <button>Start Quiz</button>
             </div>
             <p>View Highscore</p>
-            <p>Time</p>
+            <p>Time: </p>
         </header>
 <!-- BREAK -->
         <main>
-            <section>
-                <div class="question-1">
+            <section class = questions>
+                <form class="question-1">
                     <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
-                    <ul>
-                        <li><buttom>A. Console.log</buttom></li>  
-                        <li><buttom>B. For Loops</buttom></li>  
-                        <li><buttom>C. Terminal/Bash</buttom></li>  
-                        <li><buttom>D. JavaScript</buttom></li>  
-                    </ul>
-                </div>
+                  
+                    <input type="radio" id="Console-log" name="useful_tool" value="Console.log">
+                    <label for="Console-log">Console.log</label><br>
+                    
+                    <input type="radio" id="for-loops" name="useful_tool" value="For Loops">
+                    <label for="for-loops">For Loops</label><br>
+                    
+                    <input type="radio" id="curly-brackets" name="useful_tool" value="Terminal/Bash">
+                    <label for="Curly Brackets">Terminal/Bash</label><br>
+                    
+                    <input type="radio" id="javascript" name="useful_tool" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                    
+                </form>
 
-                <div class="question-2">
+                <form class="question-2">
                     <h2>Strings values must be enclosed within ____ when being assigned to variables.</h2>
-                    <ul>
-                        <li><buttom>A. Parentheses</buttom></li>  
-                        <li><buttom>B. Quatations</buttom></li>  
-                        <li><buttom>C. Curly Brackets</buttom></li>  
-                        <li><buttom>D. Commas</buttom></li>  
-                    </ul>
-                </div>
 
-                <div class="question-3">
+                    <input type="radio" id="parentheses" name="string_values" value="Parentheses">
+                    <label for="parentheses">Parentheses</label><br>
+                    
+                    <input type="radio" id="quotations" name="string_values" value="Quotations">
+                    <label for="quotations">Quotations</label><br>
+                    
+                    <input type="radio" id="curly-brackets-qt2" name="string_values" value="Curly Brackets">
+                    <label for="curly-brackets">Curly Brackets</label><br>
+                    
+                    <input type="radio" id="commas" name="string_values" value="Commas">
+                    <label for="commas">Commas</label> 
+                </form>
+
+                <form class="question-3">
                     <h2>Arrays in JavaScript can be used to store ___.</h2>
-                    <ul>
-                        <li><buttom>A. Numbers and Strings</buttom></li>  
-                        <li><buttom>B. Other Arrays</buttom></li>  
-                        <li><buttom>C. Booleans</buttom></li>  
-                        <li><buttom>D. All of the above</buttom></li>  
-                    </ul>
-                </div>
+                    <input type="radio" id="numbers-and-strings" name="arrays_js" value="Numbers and Strings">
+                    <label for="numbers-and-strings">Numbers and Strings</label><br>
+                    
+                    <input type="radio" id="other-arrays" name="arrays_js" value="Other Arrays">
+                    <label for="other-arrays">Other Arrays</label><br>
+                    
+                    <input type="radio" id="booleans" name="arrays_js" value="Booleans">
+                    <label for="booleans">Booleans</label><br>
+                    
+                    <input type="radio" id="all-of-the-above" name="arrays_js" value="All of the above">
+                    <label for="all-of-the-above">All of the above</label> 
+                </form>
 
-                <div class="question-4">
+                <form class="question-4">
                     <h2>The condition in an if / else statement is enclosed within ___.</h2>
-                    <ul>
-                        <li><buttom>A. Square Brackets</buttom></li>  
-                        <li><buttom>B. Parentheses </buttom></li>  
-                        <li><buttom>C. Curly Brackets </buttom></li>  
-                        <li><buttom>D. Quotations </buttom></li>  
-                    </ul>
-                </div>
+                    <input type="radio" id="square-brackets" name="if_else" value="Square Brackets">
+                    <label for="square-brackets">Square Brackets</label><br>
+                    
+                    <input type="radio" id="parentheses-qt4" name="if_else" value="Parentheses">
+                    <label for="parentheses-qt4">Parentheses</label><br>
+                    
+                    <input type="radio" id="curly-brackets-qt4" name="if_else" value="Curly Brackets">
+                    <label for="curly-brackets-qt4">Curly Brackets</label><br>
+                    
+                    <input type="radio" id="quotations-qt4" name="if_else" value="Quotations">
+                    <label for="quotations-qt4">Quotations</label> 
+                </form>
 
-                <div class="question-5">
+                <form class="question-5">
                     <h2>Commonly used data types DO NOT include:</h2>
-                    <ul>
-                        <li><buttom>A. Strings  </buttom></li>  
-                        <li><buttom>B. Booleans </buttom></li>  
-                        <li><buttom>C. Alerts </buttom></li>  
-                        <li><buttom>D. Numbers </buttom></li>  
-                    </ul>
-                </div>
+                    <input type="radio" id="strings" name="data_types" value="Strings">
+                    <label for="strings">Strings</label><br>
+                    
+                    <input type="radio" id="booleans-qt5" name="data_types" value="Booleans">
+                    <label for="booleans-qt5">Booleans</label><br>
+                    
+                    <input type="radio" id="alerts" name="data_types" value="Alerts">
+                    <label for="alerts">Alerts</label><br>
+                    
+                    <input type="radio" id="numbers" name="data_types" value="Numbers">
+                    <label for="numbers">Numbers</label> 
+                </form>
             </section>
+
+            <section>
+                <form class="done">
+                    <h3>All DONE! </h3>
+                    <p> </p>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <input type="submit" name="name"id="submit" required>
+                </form>
+            </section>
+
+
         </main>
 <!-- BREAK -->
         <footer>
