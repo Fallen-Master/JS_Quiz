@@ -23,6 +23,8 @@ var timerRemaining =  75;
 var userScore = 0;
 var timerInterval;
 
+    
+
 startButton.addEventListener('click', function() {
     initialSection.classList.add('hidden');
     // endEl.classList.add('hidden');
@@ -59,6 +61,7 @@ startButton.addEventListener('click', function() {
         timerRemaining -=15; 
         alert('incorrect! 15 seconds Gone...')
     }
+    resultEl.textContent = 'Final score is ' + userScore;
   });
 
   submit2El.addEventListener('click', function(event){
@@ -74,7 +77,8 @@ startButton.addEventListener('click', function() {
     else {
         timerRemaining -=15; 
         alert('incorrect! 15 seconds Gone...')
-    }    
+    }
+    resultEl.textContent = 'Final score is ' + userScore;    
   });
 
   submit3El.addEventListener('click', function (event){
@@ -91,6 +95,7 @@ startButton.addEventListener('click', function() {
         timerRemaining -=15; 
         alert('incorrect! 15 seconds Gone...')
     }   
+    resultEl.textContent = 'Final score is ' + userScore;
   });
 
   submit4El.addEventListener('click', function(event){
@@ -107,6 +112,7 @@ startButton.addEventListener('click', function() {
         timerRemaining -=15; 
         alert('incorrect! 15 seconds Gone...');
     }   
+    resultEl.textContent = 'Final score is ' + userScore;
   });
 
   submit5El.addEventListener('click', function(event){
@@ -124,9 +130,11 @@ startButton.addEventListener('click', function() {
         alert('incorrect! We are done here...');
     }  
     clearInterval(timerInterval);
+    resultEl.textContent = 'Final score is ' + userScore;
   });
 
-  
+
+  resultEl.textContent = 'Final score is ' + userScore;
 
 
   
