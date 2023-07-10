@@ -13,7 +13,7 @@
     
         <header>
             <p id="highscore">View Highscore</p>
-            <p id="timer">Time: </p>
+            <p id="timer">Time: 0</p>
         </header>
 <!-- BREAK -->
         <main>
@@ -23,8 +23,9 @@
                     <button id="start">Start Quiz</button>
             </section>
 
-            <section class = questions>
-                <form class="question-1">
+            <section class = "questions ">
+                
+                <form class="question-1 hidden">
                     <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
                     <input type="radio" id="Console-log" name="useful_tool" value="Console.log">
                     <label for="Console-log">Console.log</label>
@@ -39,10 +40,10 @@
                     <label for="javascript">JavaScript</label>
                     <br>
                     <input type="submit" id="submit-1" name="submit-1" value="Submit">
-                    
+                    <p id="message"></p>
                 </form>
 
-                <form class="question-2">
+                <form class="question-2 hidden">
                     <h2>Strings values must be enclosed within ____ when being assigned to variables.</h2>
                     <input type="radio" id="parentheses" name="string_values" value="Parentheses">
                     <label for="parentheses">Parentheses</label>
@@ -57,9 +58,10 @@
                     <label for="commas">Commas</label> 
                     <br>
                     <input type="submit" id="submit-2" name="submit-2" value="Submit">
+                    <p id="message"></p>
                 </form>
 
-                <form class="question-3">
+                <form class="question-3 hidden">
                     <h2>Arrays in JavaScript can be used to store ___.</h2>
                     <input type="radio" id="numbers-and-strings" name="arrays_js" value="Numbers and Strings">
                     <label for="numbers-and-strings">Numbers and Strings</label>
@@ -74,9 +76,10 @@
                     <label for="all-of-the-above">All of the above</label> 
                     <br>
                     <input type="submit" id="submit-3" name="submit-3" value="Submit">
+                    <p id="message"></p>
                 </form>
 
-                <form class="question-4">
+                <form class="question-4 hidden">
                     <h2>The condition in an if / else statement is enclosed within ___.</h2>
                     <input type="radio" id="square-brackets" name="if_else" value="Square Brackets">
                     <label for="square-brackets">Square Brackets</label>
@@ -91,9 +94,10 @@
                     <label for="quotations-qt4">Quotations</label> 
                     <br>
                     <input type="submit" id="submit-4" name="submit-4" value="Submit">
+                    <p id="message"></p>
                 </form>
 
-                <form class="question-5">
+                <form class="question-5 hidden">
                     <h2>Commonly used data types DO NOT include:</h2>
                     <input type="radio" id="strings" name="data_types" value="Strings">
                     <label for="strings">Strings</label>
@@ -108,10 +112,11 @@
                     <label for="numbers">Numbers</label> 
                     <br>
                     <input type="submit" id="submit-5" name="submit-5" value="Submit">
+                    <p id="message"></p>
                 </form>
             </section>
 
-            <section class="end">
+            <section class="end hidden">
                 <form >
                     <h3>All DONE! </h3>
                     <p id="results"> </p>
