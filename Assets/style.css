@@ -9,3 +9,11 @@
 .hidden{
     display: none;
 }
+main{
+    margin: 15rem;
+    padding: 18rem;
+}
+
+input[type='radio']{
+background-color: blue;
+}
