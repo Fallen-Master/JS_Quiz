@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JS Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./Assets/normalize.css/normalize.css">
     <link rel="stylesheet" href="./Assets/style.css" />
   </head>
    
   <body>
     
-        <header>
-            <p id="highscore">View Highscore</p>
-            <p id="timer">Time: 0</p>
+        <header class="  d-flex justify-content-between align-items-center ">
+            <p id="highscore" class="p-2">View Highscore</p>
+            <p id="timer" class="p-2 ">Time: 0</p>
         </header>
 <!-- BREAK -->
-        <main>
+        <main class="d-flex justify-content-center align-items-center p-3 card" >
             <section class="center">
                     <h1>JavaScript Quiz</h1>
                     <p> Try to answer the follwing code-related questions within the time limit. Kepe in mind that incorrect answers will penalize your score/time by 15 seconds</p>
@@ -28,91 +31,91 @@
                 <form class="question-1 hidden">
                     <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
                     <input type="radio" id="Console-log" name="useful_tool" value="Console.log">
-                    <label for="Console-log">Console.log</label>
+                    <label class="btn btn-outline-primary" for="Console-log">Console.log</label>
                     <br>
                     <input type="radio" id="for-loops" name="useful_tool" value="For Loops">
-                    <label for="for-loops">For Loops</label>
+                    <label class="btn btn-outline-primary" for="for-loops">For Loops</label>
                     <br>
                     <input type="radio" id="curly-brackets" name="useful_tool" value="Terminal/Bash">
-                    <label for="Curly Brackets">Terminal/Bash</label>
+                    <label class="btn btn-outline-primary" for="Curly Brackets">Terminal/Bash</label>
                     <br>
                     <input type="radio" id="javascript" name="useful_tool" value="JavaScript">
-                    <label for="javascript">JavaScript</label>
+                    <label class="btn btn-outline-primary" for="javascript">JavaScript</label>
                     <br>
                     <input type="submit" id="submit-1" name="submit-1" value="Submit">
-                    <p id="message"></p>
+                    <!-- <p id="message"></p> -->
                 </form>
 
                 <form class="question-2 hidden">
                     <h2>Strings values must be enclosed within ____ when being assigned to variables.</h2>
                     <input type="radio" id="parentheses" name="string_values" value="Parentheses">
-                    <label for="parentheses">Parentheses</label>
+                    <label class="btn btn-outline-primary" for="parentheses">Parentheses</label>
                     <br>
                     <input type="radio" id="quotations" name="string_values" value="Quotations">
-                    <label for="quotations">Quotations</label>
+                    <label class="btn btn-outline-primary" for="quotations">Quotations</label>
                     <br>
                     <input type="radio" id="curly-brackets-qt2" name="string_values" value="Curly Brackets">
-                    <label for="curly-brackets">Curly Brackets</label>
+                    <label class="btn btn-outline-primary" for="curly-brackets">Curly Brackets</label>
                     <br>
                     <input type="radio" id="commas" name="string_values" value="Commas">
-                    <label for="commas">Commas</label> 
+                    <label class="btn btn-outline-primary" for="commas">Commas</label> 
                     <br>
                     <input type="submit" id="submit-2" name="submit-2" value="Submit">
-                    <p id="message"></p>
+                    <!-- <p id="message"></p> -->
                 </form>
 
                 <form class="question-3 hidden">
                     <h2>Arrays in JavaScript can be used to store ___.</h2>
                     <input type="radio" id="numbers-and-strings" name="arrays_js" value="Numbers and Strings">
-                    <label for="numbers-and-strings">Numbers and Strings</label>
+                    <label class="btn btn-outline-primary" for="numbers-and-strings">Numbers and Strings</label>
                     <br>
                     <input type="radio" id="other-arrays" name="arrays_js" value="Other Arrays">
-                    <label for="other-arrays">Other Arrays</label>
+                    <label class="btn btn-outline-primary" for="other-arrays">Other Arrays</label>
                     <br>
                     <input type="radio" id="booleans" name="arrays_js" value="Booleans">
-                    <label for="booleans">Booleans</label>
+                    <label class="btn btn-outline-primary" for="booleans">Booleans</label>
                     <br>
                     <input type="radio" id="all-of-the-above" name="arrays_js" value="All of the above">
-                    <label for="all-of-the-above">All of the above</label> 
+                    <label class="btn btn-outline-primary" for="all-of-the-above">All of the above</label> 
                     <br>
                     <input type="submit" id="submit-3" name="submit-3" value="Submit">
-                    <p id="message"></p>
+                    <!-- <p id="message"></p> -->
                 </form>
 
                 <form class="question-4 hidden">
                     <h2>The condition in an if / else statement is enclosed within ___.</h2>
                     <input type="radio" id="square-brackets" name="if_else" value="Square Brackets">
-                    <label for="square-brackets">Square Brackets</label>
+                    <label class="btn btn-outline-primary" for="square-brackets">Square Brackets</label>
                     <br>
                     <input type="radio" id="parentheses-qt4" name="if_else" value="Parentheses">
-                    <label for="parentheses-qt4">Parentheses</label>
+                    <label class="btn btn-outline-primary" for="parentheses-qt4">Parentheses</label>
                     <br>
                     <input type="radio" id="curly-brackets-qt4" name="if_else" value="Curly Brackets">
-                    <label for="curly-brackets-qt4">Curly Brackets</label>
+                    <label class="btn btn-outline-primary" for="curly-brackets-qt4">Curly Brackets</label>
                     <br>
                     <input type="radio" id="quotations-qt4" name="if_else" value="Quotations">
-                    <label for="quotations-qt4">Quotations</label> 
+                    <label class="btn btn-outline-primary" for="quotations-qt4">Quotations</label> 
                     <br>
                     <input type="submit" id="submit-4" name="submit-4" value="Submit">
-                    <p id="message"></p>
+                    <!-- <p id="message"></p> -->
                 </form>
 
                 <form class="question-5 hidden">
                     <h2>Commonly used data types DO NOT include:</h2>
                     <input type="radio" id="strings" name="data_types" value="Strings">
-                    <label for="strings">Strings</label>
+                    <label class="btn btn-outline-primary" for="strings">Strings</label>
                     <br>
                     <input type="radio" id="booleans-qt5" name="data_types" value="Booleans">
-                    <label for="booleans-qt5">Booleans</label>
+                    <label class="btn btn-outline-primary" for="booleans-qt5">Booleans</label>
                     <br>
                     <input type="radio" id="alerts" name="data_types" value="Alerts">
-                    <label for="alerts">Alerts</label>
+                    <label class="btn btn-outline-primary" for="alerts">Alerts</label>
                     <br>
                     <input type="radio" id="numbers" name="data_types" value="Numbers">
-                    <label for="numbers">Numbers</label> 
+                    <label class="btn btn-outline-primary" for="numbers">Numbers</label> 
                     <br>
                     <input type="submit" id="submit-5" name="submit-5" value="Submit">
-                    <p id="message"></p>
+                    <!-- <p id="message"></p> -->
                 </form>
             </section>
 
@@ -126,12 +129,25 @@
                 </form>
             </section>
 
+            <section class="highscore-list hidden">
+                <h3>HighScore</h3>
+                <ul id="highscores">
+                    
+                </ul>
+                <p id="score"></p> 
+                <button type="button" id="back" class="btn btn-primary">Go Back</button>
+                <button type="button" id="clear" class="btn btn-secondary">Clear History</button>
+
+            </section>
+
 
         </main>
 <!-- BREAK -->
-        <footer>
-
+        <footer class="d-flex justify-content-center align-items-end">
+            <h5 class="">This was made with love</h5>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
      <script src = "./Assets/script.js"></script>
     </body>
 </html>
