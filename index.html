@@ -15,14 +15,14 @@
   <body>
     
         <header class="  d-flex justify-content-between align-items-center ">
-            <p id="highscore" class="p-2">View Highscore</p>
+            <p id="highscore" class="p-2 icon-link">View Highscore</p>
             <p id="timer" class="p-2 ">Time: 0</p>
         </header>
 <!-- BREAK -->
         <main class="d-flex justify-content-center align-items-center p-3 card" >
             <section class="center">
                     <h1>JavaScript Quiz</h1>
-                    <p> Try to answer the follwing code-related questions within the time limit. Kepe in mind that incorrect answers will penalize your score/time by 15 seconds</p>
+                    <p> Try to answer the follwing code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 15 seconds.</p>
                     <button id="start">Start Quiz</button>
             </section>
 
@@ -122,7 +122,7 @@
             <section class="end hidden">
                 <form>
                     <h3>All DONE! </h3>
-                    <p id="results"> </p>
+                    <p id="score"> </p>
                         <label for="name">Enter initials here:</label>
                         <input type="text" id="initial" name="initials" required>
                         <input type="submit" name="submit-final"id="submit-final" value ="submit" required>
@@ -134,7 +134,7 @@
                 <ul id="highscores">
                     
                 </ul>
-                <p id="score"></p> 
+                <!-- <p id="score"></p>  -->
                 <button type="button" id="back" class="btn btn-primary">Go Back</button>
                 <button type="button" id="clear" class="btn btn-secondary">Clear History</button>
 

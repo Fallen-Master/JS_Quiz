@@ -27,25 +27,45 @@ var timerRemaining = 75;
 var userScore = 0;
 var timerInterval;
  var highscorePage = document.getElementById('highscore')
-
+var timerActive = false;
 
 
 
 startButton.addEventListener('click', function() {
-  initialSection.classList.add('hidden');
-  question1El.classList.remove('hidden');
+  if (!timerActive) { 
+    userScore = 0; 
+    initialSection.classList.add('hidden');
+    question1El.classList.remove('hidden');
 
-  timerEl.textContent = 'Time: ' + timerRemaining;
-  timerInterval = setInterval(function() {
-    timerRemaining--;
     timerEl.textContent = 'Time: ' + timerRemaining;
+    timerActive = true; 
+    timerInterval = setInterval(function() {
+      timerRemaining--;
+      timerEl.textContent = 'Time: ' + timerRemaining;
 
-    if (timerRemaining <= 0) {
-      clearInterval(timerInterval);
-      // Game over actions here
-    }
-  }, 1000);
+      if (timerRemaining <= 0) {
+        clearInterval(timerInterval);
+        timerActive = false; 
+        endGame();
+      }
+    }, 1000);
+  }
 });
+
+function endgame() {
+  question1El.classList.add('hidden');
+  question2El.classList.add('hidden');
+  question3El.classList.add('hidden');
+  question4El.classList.add('hidden');
+  question5El.classList.add('hidden');
+  endEl.classList.remove('hidden');
+
+  scoreEl.textContent = 'Final score is ' + userScore;
+
+  highscoreListEl.classList.remove('hidden');
+  updateHighscores();
+  
+}
 
 submit1El.addEventListener('click', function(event) {
   event.preventDefault();
@@ -60,6 +80,7 @@ submit1El.addEventListener('click', function(event) {
   } else {
     timerRemaining -= 15;
     alert('Incorrect! 15 seconds deducted...');
+   
   }
   scoreEl.textContent = 'Final score is ' + userScore;
 });
@@ -76,6 +97,7 @@ submit2El.addEventListener('click', function(event) {
   } else {
     timerRemaining -= 15;
     alert('Incorrect! 15 seconds deducted...');
+    
   }
   scoreEl.textContent = 'Final score is ' + userScore;
 });
@@ -92,6 +114,7 @@ submit3El.addEventListener('click', function(event) {
   } else {
     timerRemaining -= 15;
     alert('Incorrect! 15 seconds deducted...');
+   
   }
   scoreEl.textContent = 'Final score is ' + userScore;
 });
@@ -108,6 +131,7 @@ submit4El.addEventListener('click', function(event) {
   } else {
     timerRemaining -= 15;
     alert('Incorrect! 15 seconds deducted...');
+   
   }
   scoreEl.textContent = 'Final score is ' + userScore;
 });
@@ -116,6 +140,7 @@ submit5El.addEventListener('click', function(event) {
   event.preventDefault();
   question5El.classList.add('hidden');
   endEl.classList.remove('hidden');
+
 
   let chosenAnswer = document.querySelector('input[name="data_types"]:checked');
   if (chosenAnswer && chosenAnswer.value === 'Alerts') {
@@ -127,21 +152,25 @@ submit5El.addEventListener('click', function(event) {
   }
   clearInterval(timerInterval);
   scoreEl.textContent = 'Final score is ' + userScore;
+  
 });
 
 
-var yourScore = document.getElementById('results')
-yourScore.textContent = 'Final score is ' + userScore;
+// var yourScore = document.getElementById('results')
+// yourScore.textContent = 'Final score is ' + userScore;
 
 finalSubmitEl.addEventListener('click', function(event) {
   scoreEl.textContent = 'Final score is ' + userScore;
   event.preventDefault();
   endEl.classList.add('hidden');
   highscoreListEl.classList.remove('hidden');
+  timerRemaining = 75;
+  timerEl.textContent = 'Time: ' + timerRemaining
 
   let userInitials = document.getElementById('initial').value;
 
   if (userInitials === '') {
+
     alert('Initials cannot be blank');
     return false;
   }
@@ -174,7 +203,7 @@ function updateHighscores() {
   }
 }
 
-scoreEl.textContent = 'Final score is ' + userScore;
+// scoreEl.textContent = 'Final score is ' + userScore;
 
 function clearHighscores() {
   localStorage.removeItem('highscores');
@@ -189,16 +218,23 @@ clearButton.addEventListener("click", function(){
 
 
 
-highscorePage.addEventListener('click', function(){
-  initialSection.classList.add('hidden')
-  highscoreListEl.classList.remove('hidden')
+highscorePage.addEventListener('click', function() {
+  if (timerActive) {
+    return;
+  }
+  initialSection.classList.add('hidden');
+  highscoreListEl.classList.remove('hidden');
   updateHighscores();
- })
+});
+
 
  var backEl = document.getElementById('back')
 
  backEl.addEventListener('click', function(){
-
+  highscoreListEl.classList.add('hidden')
+ initialSection.classList.remove('hidden')
  })
+
+
 
  
